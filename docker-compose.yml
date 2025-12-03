@@ -1,0 +1,24 @@
+services:
+  server-community:
+    build: .
+    command: "uvicorn main:app --host 0.0.0.0 --port 8003"
+    ports:
+      - "8003:8003"
+    environment:
+      - REDIS_URL=redis://redis-community:6379
+      - REGISTRY_URL=${REGISTRY_URL:-http://localhost:8001}
+      - MY_URL=${MY_URL:-http://localhost:8003}
+      - COMMUNITY_MODE=true
+      - NODE_NAME=${NODE_NAME}
+      - CONTACT_ZALO=${CONTACT_ZALO}
+      - CONTACT_PHONE=${CONTACT_PHONE}
+      - CONTACT_EMAIL=${CONTACT_EMAIL}
+      - CONTACT_NAME=${CONTACT_NAME}
+      - CONTACT_FB=${CONTACT_FB}
+    depends_on:
+      - redis-community
+    restart: always
+
+  redis-community:
+    image: redis:alpine
+    restart: always

@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+redis
+pydantic
+python-dotenv
+email-validator
+python-multipart
+httpx
+slowapi
