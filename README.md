@@ -102,8 +102,11 @@ Server Community cung cấp các API tương tự như Server Read nhưng đi qu
 *   **GET /api/news**: Lấy tin tức.
 *   **GET /api/phones**: Lấy danh sách số điện thoại khẩn cấp.
 *   **GET /api/rescue_points**: Lấy danh sách điểm cứu trợ.
-*   **GET /api/map/tiles/{z}/{x}/{y}**: Proxy bản đồ (nếu có).
 *   **GET /api/speedtest**: Kiểm tra tốc độ kết nối (Redis ping, Hot/Cold latency).
 
 ## 🤝 Đóng góp
 Mọi đóng góp để cải thiện hiệu năng cache hoặc tối ưu hóa quy trình đồng bộ đều được hoan nghênh. Vui lòng tạo Pull Request trên GitHub.
+
+## LICENSE
+Copyright (c) 2025 Nexuron
+Licensed under the Nexuron Custom License — see LICENSE.
